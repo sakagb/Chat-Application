@@ -15,10 +15,10 @@ void read_function(char buffer[], int sock)
 	{
 		// Wait for response
 		memset(buffer, 0, 1024);
-    	int bytesReceived = recv(sock, buffer, 1024, 0);
+    		int bytesReceived = recv(sock, buffer, 1024, 0);
 
-    	// Display response
-    	std::cout << std::string(buffer, bytesReceived) << "\r\n";
+    		// Display response
+    		std::cout << std::string(buffer, bytesReceived) << "\r\n";
 	}
 }
 
@@ -27,14 +27,14 @@ void write_function(std::string userInput, int sock)
 	while(true)
 	{
 		// Enter lines of text
-    	getline(std::cin, userInput);
+    		getline(std::cin, userInput);
 
-    	// Send to server
-    	int sendRes = send(sock, userInput.c_str(), userInput.size() + 1, 0);
-    	if (sendRes == -1)
-    	{
-        	std::cout << "Could not send to server! Whoops!\r\n";
-    	}
+    		// Send to server
+    		int sendRes = send(sock, userInput.c_str(), userInput.size() + 1, 0);
+    		if (sendRes == -1)
+    		{
+        		std::cout << "Could not send to server! Whoops!\r\n";
+    		}
 	}
 }
 
