@@ -26,3 +26,7 @@ Then, type in the following command to run the client
 ```
 ./mclient
 ```
+
+## Notes:
+- This project was developed and tested in macOS. Theoretically, it should work for any UNIX OS as the libraries and the socket definitions are relatively the same. For Windows, the code would have to be re-writen, specifically the sections related to the sockets operation.
+- For the embedded database, SQLite was used. If necessary, it should be downloaded and installed on the server's device.
